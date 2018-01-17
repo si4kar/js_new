@@ -8,13 +8,22 @@
 
         function selectFirstChild() {
             var list = document.getElementById("list");
-            debugger;
-            var child = list.firstChild;
-            if (child != null)
-            {
-                child.setAttribute("style", "color:red;");
+
+            for (var i = 0; i < list.firstChild.length; ++i) {
+                var temp = list.firstChild[i];
+                debugger;
+                if (temp.nodeType != 1) {
+                    continue;
+                }
+
+                var child = list.firstChild.nodeType[1];
             }
+                if (child != null) {
+                    child.setAttribute("style", "color:red;");
+                }
+
         }
+/*
 
         function selectLastChild() {
             var child = list.lastChild;
@@ -22,6 +31,20 @@
                 child.setAttribute("style", "color:red;");
             }
         }
+
+
+    var node = null;
+
+        function selectNextNode() {
+            resetColor();
+            if (node ==null) {
+                var list = document.getElementById("list");
+                node = list.firstChild;
+                node.setAttribute("style", )
+            }
+        }
+*/
+
 
     </script>
 </head>
@@ -39,12 +62,12 @@
 
 
     <input type="button" onclick="selectFirstChild()" style="color: black" value="Choose first element"> <br />
-   <!-- <input type="button" onclick="selectLastChild()" style="" value="Choose last element"><br />
+  <!--  <input type="button" onclick="selectLastChild()" style="" value="Choose last element"><br />
     <input type="button" onclick="selectNextNode()" style="" value="Choose next element"><br />
     <input type="button" onclick="selectPrewNode()" style="" value="Choose prew element"><br />
     <input type="button" onclick="createNewChild()" style="" value="Create new element"><br />
     <input type="button" onclick="removeLastChild()" style="" value="Remove last element"><br />
-    <input type="button" onclick="createNewChildAtStart()" style="" value="Add element at start">
--->
+    <input type="button" onclick="createNewChildAtStart()" style="" value="Add element at start">-->
+
 </body>
 </html>
