@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of elements</title>
+    <script type="text/javascript">
+
+
+        function selectFirstChild() {
+            var list = document.getElementById("list");
+            debugger;
+            var child = list.firstChild;
+            if (child != null)
+            {
+                child.setAttribute("style", "color:red;");
+            }
+        }
+
+        function selectLastChild() {
+            var child = list.lastChild;
+            if (child != null){
+                child.setAttribute("style", "color:red;");
+            }
+        }
+
+    </script>
+</head>
+
+
+<body>
+    <ul id="list">
+        <li> Hello 1</li>
+        <li> Hello 2</li>
+        <li> Hello 3</li>
+        <li> Hello 4</li>
+        <li> Hello 5</li>
+
+    </ul>
+
+
+    <input type="button" onclick="selectFirstChild()" style="color: black" value="Choose first element"> <br />
+   <!-- <input type="button" onclick="selectLastChild()" style="" value="Choose last element"><br />
+    <input type="button" onclick="selectNextNode()" style="" value="Choose next element"><br />
+    <input type="button" onclick="selectPrewNode()" style="" value="Choose prew element"><br />
+    <input type="button" onclick="createNewChild()" style="" value="Create new element"><br />
+    <input type="button" onclick="removeLastChild()" style="" value="Remove last element"><br />
+    <input type="button" onclick="createNewChildAtStart()" style="" value="Add element at start">
+-->
+</body>
+</html>
